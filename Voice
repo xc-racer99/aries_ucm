@@ -2,28 +2,36 @@ SectionVerb {
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='DAC1R Mixer AIF1.1 Switch' 1"
-                cset "name='DAC1L Mixer AIF1.1 Switch' 1"
+                cset "name='DAC1R Mixer AIF2 Switch' 1"
+                cset "name='DAC1L Mixer AIF2 Switch' 1"
                 cset "name='DAC1 Switch' 1"
 
                 cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 1"
                 cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 1"
+
+                cset "name='AIF2DAC2R Mixer AIF1.1 Switch' 1"
+                cset "name='AIF2DAC2L Mixer AIF1.1 Switch' 1"
+                cset "name='DAC2 Switch' 1"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='DAC1R Mixer AIF1.1 Switch' 0"
-                cset "name='DAC1L Mixer AIF1.1 Switch' 0"
+                cset "name='DAC1R Mixer AIF2 Switch' 0"
+                cset "name='DAC1L Mixer AIF2 Switch' 0"
                 cset "name='DAC1 Switch' 0"
 
                 cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
                 cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
+
+                cset "name='AIF2DAC2R Mixer AIF1.1 Switch' 0"
+                cset "name='AIF2DAC2L Mixer AIF1.1 Switch' 0"
+                cset "name='DAC2 Switch' 0"
         ]
 
         Value {
-                PlaybackPCM "hw:Aries,0"
-                CapturePCM "hw:Aries,0"
+                PlaybackPCM "hw:Aries,1"
+                CapturePCM "hw:Aries,1"
         }
 }
 
