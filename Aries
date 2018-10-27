@@ -29,6 +29,9 @@ SectionDefaults [
 	cset "name='Speaker Boost Volume' 6"
 	cset "name='Speaker Volume' 63"
 
+	/* Dock */
+	cset "name='LINEOUT2 Volume' 45"
+
 	/* Main Mic */
 	cset "name='IN1L Volume' 31"
 	cset "name='IN1L ZC Switch' 1"
