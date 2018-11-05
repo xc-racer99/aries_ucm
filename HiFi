@@ -33,7 +33,6 @@ SectionDevice."Earpiece" {
         ConflictingDevice[
                 "Headphones"
                 "Speaker"
-                "Dock"
         ]
 
         EnableSequence [
@@ -72,7 +71,6 @@ SectionDevice."Speaker" {
         ConflictingDevice [
                 "Headphones"
                 "Earpiece"
-                "Dock"
         ]
 
         EnableSequence [
@@ -96,53 +94,12 @@ SectionDevice."Speaker" {
         }
 }
 
-SectionDevice."Dock" {
-        Comment "Car or Desk Dock Device"
-
-        ConflictingDevice [
-                "Headphones"
-                "Speaker"
-                "Earpiece"
-        ]
-
-        EnableSequence [
-                cdev "hw:Aries"
-
-                cset "name='LINEOUT2N Mixer DAC Switch' 1"
-                cset "name='LINEOUT2P Mixer DAC Switch' 1"
-
-                cset "name='Right Output Switch' 1"
-                cset "name='Left Output Switch' 1"
-
-                cset "name='LINEOUT2N Switch' 1"
-                cset "name='LINEOUT2P Switch' 1"
-        ]
-
-        DisableSequence [
-                cdev "hw:Aries"
-
-                cset "name='LINEOUT2N Mixer DAC Switch' 0"
-                cset "name='LINEOUT2P Mixer DAC Switch' 0"
-
-                cset "name='Right Output Switch' 0"
-                cset "name='Left Output Switch' 0"
-
-                cset "name='LINEOUT2N Switch' 0"
-                cset "name='LINEOUT2P Switch' 0"
-        ]
-
-        Value {
-                PlaybackChannels "2"
-        }
-}
-
 SectionDevice."Headphones" {
         Comment "Headset Rx device"
 
         ConflictingDevice [
                 "Speaker"
                 "Earpiece"
-                "Dock"
         ]
 
         EnableSequence [
