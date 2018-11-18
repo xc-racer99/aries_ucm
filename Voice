@@ -70,6 +70,10 @@ SectionDevice."Earpiece" {
                 cset "name='Earpiece Mixer Left Output Switch' 0"
                 cset "name='Earpiece Switch' 0"
         ]
+
+        Value {
+                PlaybackChannels "1"
+        }
 }
 
 
@@ -151,6 +155,10 @@ SectionDevice."Main Mic" {
                 cset "name='IN1L PGA IN1LN Switch' 0"
                 cset "name='MIXINL IN1L Switch' 0"
         ]
+
+        Value {
+                CaptureChannels "2"
+        }
 }
 
 SectionDevice."Headset Mic" {
@@ -177,4 +185,8 @@ SectionDevice."Headset Mic" {
                 cset "name='IN1R PGA IN1RN Switch' 0"
                 cset "name='MIXINR IN1R Switch' 0"
         ]
+
+        Value {
+                CaptureChannels "2"
+        }
 }
