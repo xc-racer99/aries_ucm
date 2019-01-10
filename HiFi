@@ -2,23 +2,23 @@ SectionVerb {
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='DAC1R Mixer AIF1.1 Switch' 1"
-                cset "name='DAC1L Mixer AIF1.1 Switch' 1"
-                cset "name='DAC1 Switch' 1"
+                cset "name='DAC1R Mixer AIF1.1 Switch' on"
+                cset "name='DAC1L Mixer AIF1.1 Switch' on"
+                cset "name='DAC1 Switch' on"
 
-                cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 1"
-                cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 1"
+                cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' on"
+                cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='DAC1R Mixer AIF1.1 Switch' 0"
-                cset "name='DAC1L Mixer AIF1.1 Switch' 0"
-                cset "name='DAC1 Switch' 0"
+                cset "name='DAC1R Mixer AIF1.1 Switch' off"
+                cset "name='DAC1L Mixer AIF1.1 Switch' off"
+                cset "name='DAC1 Switch' off"
 
-                cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
-                cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
+                cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' off"
+                cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' off"
         ]
 
         Value {
@@ -30,41 +30,31 @@ SectionVerb {
 SectionDevice."Earpiece" {
         Comment "Earpiece Receiver"
 
-        ConflictingDevice[
-                "Headphones"
-                "Speaker"
-        ]
-
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='Right Output Mixer DAC Switch' 1"
-                cset "name='Left Output Mixer DAC Switch' 1"
+                cset "name='Right Output Mixer DAC Switch' on"
+                cset "name='Left Output Mixer DAC Switch' on"
 
-                cset "name='DAC1R Mixer Right Sidetone Switch' 1"
-                cset "name='DAC1L Mixer Left Sidetone Switch' 1"
-
-                cset "name='Earpiece Mixer Right Output Switch' 1"
-                cset "name='Earpiece Mixer Left Output Switch' 1"
-                cset "name='Earpiece Switch' 1"
+                cset "name='Earpiece Mixer Right Output Switch' on"
+                cset "name='Earpiece Mixer Left Output Switch' on"
+                cset "name='Earpiece Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='Right Output Mixer DAC Switch' 0"
-                cset "name='Left Output Mixer DAC Switch' 0"
+                cset "name='Right Output Mixer DAC Switch' off"
+                cset "name='Left Output Mixer DAC Switch' off"
 
-                cset "name='DAC1R Mixer Right Sidetone Switch' 0"
-                cset "name='DAC1L Mixer Left Sidetone Switch' 0"
-
-                cset "name='Earpiece Mixer Right Output Switch' 0"
-                cset "name='Earpiece Mixer Left Output Switch' 0"
-                cset "name='Earpiece Switch' 0"
+                cset "name='Earpiece Mixer Right Output Switch' off"
+                cset "name='Earpiece Mixer Left Output Switch' off"
+                cset "name='Earpiece Switch' off"
         ]
 
         Value {
                 PlaybackChannels "1"
+		PlaybackVolume "Earpiece Volume"
         }
 }
 
@@ -72,113 +62,119 @@ SectionDevice."Earpiece" {
 SectionDevice."Speaker" {
         Comment "Speaker Rx device"
 
-        ConflictingDevice [
-                "Headphones"
-                "Earpiece"
-        ]
-
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='SPKR DAC1 Switch' 1"
-                cset "name='SPKL DAC1 Switch' 1"
-                cset "name='Speaker Switch' 1"
+                cset "name='SPKR DAC1 Switch' on"
+                cset "name='SPKL DAC1 Switch' on"
+                cset "name='Speaker Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='SPKR DAC1 Switch' 0"
-                cset "name='SPKL DAC1 Switch' 0"
-                cset "name='Speaker Switch' 0"
+                cset "name='SPKR DAC1 Switch' off"
+                cset "name='SPKL DAC1 Switch' off"
+                cset "name='Speaker Switch' off"
         ]
 
         Value {
-                PlaybackChannels "2"
+                PlaybackChannels "1"
+		PlaybackVolume "Speaker Volume"
         }
 }
 
 SectionDevice."Headphones" {
         Comment "Headset Rx device"
 
-        ConflictingDevice [
-                "Speaker"
-                "Earpiece"
-        ]
-
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='Headphone Switch' 1"
+                cset "name='Headphone Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='Headphone Switch' 0"
+                cset "name='Headphone Switch' off"
         ]
 
         Value {
                 PlaybackChannels "2"
+                PlaybackVolume "Headphone Volume"
+                JackControl "HP Jack"
         }
 }
 
 SectionDevice."Main Mic" {
         Comment "Built-in Microphone"
 
-        ConflictingDevice [
-                "Headset Mic"
-        ]
-
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='IN1L Switch' 1"
-                cset "name='IN1L PGA IN1LP Switch' 1"
-                cset "name='IN1L PGA IN1LN Switch' 1"
-                cset "name='MIXINL IN1L Switch' 1"
+                cset "name='AIF1ADCL Source' Left"
+                cset "name='AIF1ADCR Source' Left"
+                cset "name='AIF1ADC1 HPF Mode' 'Voice 1'"
+                cset "name='AIF1ADC1 HPF Switch' on"
+                cset "name='AIF1ADC1L DRC Switch' on"
+                cset "name='IN1L Switch' on"
+                cset "name='IN1L PGA IN1LP Switch' on"
+                cset "name='IN1L PGA IN1LN Switch' on"
+                cset "name='MIXINL IN1L Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='IN1L Switch' 0"
-                cset "name='IN1L PGA IN1LP Switch' 0"
-                cset "name='IN1L PGA IN1LN Switch' 0"
-                cset "name='MIXINL IN1L Switch' 0"
+                cset "name='AIF1ADCR Source' Right"
+                cset "name='AIF1ADC1 HPF Mode' HiFi"
+                cset "name='AIF1ADC1 HPF Switch' off"
+                cset "name='AIF1ADC1L DRC Switch' off"
+                cset "name='IN1L Switch' off"
+                cset "name='IN1L PGA IN1LP Switch' off"
+                cset "name='IN1L PGA IN1LN Switch' off"
+                cset "name='MIXINL IN1L Switch' off"
         ]
 
         Value {
                 CaptureChannels "2"
+		CaptureVolume "IN1L Volume"
         }
 }
 
 SectionDevice."Headset Mic" {
         Comment "Headset Microphone"
 
-        ConflictingDevice [
-                "Main Mic"
-        ]
-
         EnableSequence [
                 cdev "hw:Aries"
 
-                cset "name='IN1R Switch' 1"
-                cset "name='IN1R PGA IN1RP Switch' 1"
-                cset "name='IN1R PGA IN1RN Switch' 1"
-                cset "name='MIXINR IN1R Switch' 1"
+                cset "name='AIF1ADCL Source' Right"
+                cset "name='AIF1ADCR Source' Right"
+                cset "name='AIF1ADC1 HPF Mode' 'Voice 1'"
+                cset "name='AIF1ADC1 HPF Switch' on"
+                cset "name='AIF1ADC1R DRC Switch' on"
+                cset "name='IN1R Switch' on"
+                cset "name='IN1R PGA IN1RP Switch' on"
+                cset "name='IN1R PGA IN1RN Switch' on"
+                cset "name='MIXINR IN1R Switch' on"
         ]
 
         DisableSequence [
                 cdev "hw:Aries"
 
-                cset "name='IN1R Switch' 0"
-                cset "name='IN1R PGA IN1RP Switch' 0"
-                cset "name='IN1R PGA IN1RN Switch' 0"
-                cset "name='MIXINR IN1R Switch' 0"
+                cset "name='AIF1ADCL Source' Left"
+                cset "name='AIF1ADC1 HPF Mode' 'HiFi'"
+                cset "name='AIF1ADC1 HPF Switch' off"
+                cset "name='AIF1ADC1R DRC Switch' off"
+                cset "name='IN1R Switch' off"
+                cset "name='IN1R PGA IN1RP Switch' off"
+                cset "name='IN1R PGA IN1RN Switch' off"
+                cset "name='MIXINR IN1R Switch' off"
         ]
 
         Value {
                 CaptureChannels "2"
+		CaptureVolume "IN1R Volume"
+                JackControl "Headset Mic Jack"
         }
 }
