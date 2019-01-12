@@ -54,7 +54,7 @@ SectionDevice."Earpiece" {
 
         Value {
                 PlaybackChannels "1"
-		PlaybackVolume "Earpiece Volume"
+                PlaybackVolume "Earpiece Volume"
         }
 }
 
@@ -80,7 +80,7 @@ SectionDevice."Speaker" {
 
         Value {
                 PlaybackChannels "1"
-		PlaybackVolume "Speaker Volume"
+                PlaybackVolume "Speaker Volume"
         }
 }
 
@@ -138,7 +138,7 @@ SectionDevice."Main Mic" {
 
         Value {
                 CaptureChannels "2"
-		CaptureVolume "IN1L Volume"
+                CaptureVolume "IN1L Volume"
         }
 }
 
@@ -174,7 +174,7 @@ SectionDevice."Headset Mic" {
 
         Value {
                 CaptureChannels "2"
-		CaptureVolume "IN1R Volume"
+                CaptureVolume "IN1R Volume"
                 JackControl "Headset Mic Jack"
         }
 }
