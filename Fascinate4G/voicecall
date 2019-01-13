@@ -23,7 +23,9 @@ SectionVerb {
   Value {
     TQ "Voice"
     CaptureCTL "hw:0"
+    CaptureRate "8000"
     PlaybackCTL "hw:0"
+    PlaybackRate "8000"
   }
 }
 
