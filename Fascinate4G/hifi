@@ -57,7 +57,7 @@ SectionDevice."Headphones" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
     PlaybackVolume "Headphone Volume"
     JackControl "HP Jack"
   }
@@ -91,7 +91,7 @@ SectionDevice."Speaker" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
     PlaybackVolume "Speaker Volume"
   }
 }
@@ -127,7 +127,7 @@ SectionDevice."Earpiece" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
     PlaybackVolume "Earpiece Volume"
   }
 }
@@ -160,7 +160,7 @@ SectionDevice."Line" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
     PlaybackVolume "LINEOUT2 Volume"
     JackControl "Dock Jack"
   }
@@ -199,7 +199,7 @@ SectionDevice."Bluetooth" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
     CapturePCM "hw:0,0"
   }
 }
@@ -289,7 +289,7 @@ SectionModifier."Ringtone" {
   ]
 
   Value {
-    PlaybackPCM "hw:0,3"
+    PlaybackPCM "hw:0,0"
   }
 }
 
