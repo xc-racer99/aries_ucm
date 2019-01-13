@@ -185,8 +185,8 @@ SectionDevice."MainMic" {
   }
 }
 
-SectionDevice."SubMic" {
-  Comment "Aries built-in sub mic"
+SectionDevice."HeadsetMic" {
+  Comment "Aries external headset mic"
 
   EnableSequence [
 # Gain
@@ -194,7 +194,7 @@ SectionDevice."SubMic" {
     cset "name='MIXINR IN1R Volume' 1"
     cset "name='DAC2 Right Sidetone Volume' 12"
 # Path
-    cset "name='Sub Mic Switch' 1"
+    cset "name='Headset Mic Switch' 1"
     cset "name='IN1R PGA IN1RN Switch' 1"
     cset "name='IN1R PGA IN1RP Switch' 1"
     cset "name='IN1R Switch' 1"
@@ -206,48 +206,13 @@ SectionDevice."SubMic" {
   ]
 
   DisableSequence [
-    cset "name='Sub Mic Switch' 0"
+    cset "name='Headset Mic Switch' 0"
     cset "name='IN1R PGA IN1RN Switch' 0"
     cset "name='IN1R PGA IN1RP Switch' 0"
     cset "name='IN1R Switch' 0"
     cset "name='MIXINR IN1R Switch' 0"
     cset "name='AIF2ADCR Source' 0"
     cset "name='AIF2DAC2R Mixer Right Sidetone Switch' 0"
-  ]
-
-  Value {
-    CapturePCM "hw:0,0"
-  }
-}
-
-SectionDevice."HeadsetMic" {
-  Comment "Aries external headset mic"
-
-  EnableSequence [
-# Gain
-    cset "name='IN2L Volume' 14"
-    cset "name='MIXINL IN2L Volume' 1"
-    cset "name='DAC2 Left Sidetone Volume' 12"
-# Path
-    cset "name='Headset Mic Switch' 1"
-    cset "name='IN2L PGA IN2LN Switch' 1"
-    cset "name='IN2L PGA IN2LP Switch' 1"
-    cset "name='IN2L Switch' 1"
-    cset "name='MIXINL IN2L Switch' 1"
-    cset "name='ADCL Mux' 0"
-    cset "name='AIF2DAC2L Mixer Left Sidetone Switch' 1"
-    cset "name='AIF2ADCR Source' 0"
-    cset "name='AIF2ADCL Source' 0"
-    cset "name='AIF2ADC Mux' 0"
-  ]
-
-  DisableSequence [
-    cset "name='Headset Mic Switch' 0"
-    cset "name='IN2L PGA IN2LN Switch' 0"
-    cset "name='IN2L PGA IN2LP Switch' 0"
-    cset "name='IN2L Switch' 0"
-    cset "name='MIXINL IN2L Switch' 0"
-    cset "name='AIF2DAC2L Mixer Left Sidetone Switch' 0"
   ]
 
   Value {
