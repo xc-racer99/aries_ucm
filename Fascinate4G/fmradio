@@ -1,0 +1,125 @@
+# Use case Configuration for Mobile device
+# By Inha Song <ideal.song@samsung.com>
+
+SectionVerb {
+  EnableSequence [
+  ]
+  DisableSequence [
+  ]
+
+  Value {
+    TQ "Music"
+    PlaybackCTL "hw:0"
+    CaptureCTL "hw:0"
+  }
+}
+
+SectionDevice."Headphones" {
+  Comment "3.5mm Headphones"
+
+  EnableSequence [
+# Gain
+    cset "name='Headphone Volume' 63,63"
+# Path
+    cset "name='Right Output Mixer IN2RP Switch' 1"
+    cset "name='Left Output Mixer IN2RN Switch' 1"
+    cset "name='Right Headphone Mux' 0"
+    cset "name='Left Headphone Mux' 0"
+    cset "name='Left Output Mixer DAC Switch' 1"
+    cset "name='Right Output Mixer DAC Switch' 1"
+    cset "name='Headphone Switch' 1,1"
+    cset "name='HP Switch' 1"
+#    cset "name='FM In Switch' 1"
+  ]
+
+  DisableSequence [
+    cset "name='Right Output Mixer IN2RP Switch' 0"
+    cset "name='Left Output Mixer IN2RN Switch' 0"
+    cset "name='Left Output Mixer DAC Switch' 0"
+    cset "name='Right Output Mixer DAC Switch' 0"
+    cset "name='Headphone Switch' 0,0"
+    cset "name='HP Switch' 0"
+#    cset "name='FM In Switch' 0"
+  ]
+
+  Value {
+  }
+}
+
+SectionDevice."Speaker" {
+  Comment "built-in Speaker"
+
+  EnableSequence [
+# Gain
+    cset "name='IN2R Volume' 31"
+    cset "name='MIXINR IN2R Volume' 1"
+    cset "name='Speaker Mixer Volume' 3,3"
+    cset "name='Speaker Volume' 60,60"
+    cset "name='Speaker Boost Volume' 7,7"
+# Path
+    cset "name='IN2R PGA IN2RN Switch' 1"
+    cset "name='IN2R PGA IN2RP Switch' 1"
+    cset "name='IN2R Switch' 1"
+    cset "name='MIXINR IN2R Switch' 1"
+    cset "name='ADCR Mux' 0"
+    cset "name='DAC1R Mixer Right Sidetone Switch' 1"
+    cset "name='DAC1L Mixer Right Sidetone Switch' 1"
+    cset "name='DAC1 Switch' 1,1"
+    cset "name='SPKL DAC1 Switch' 1"
+    cset "name='SPKR DAC1 Switch' 1"
+    cset "name='SPKL Boost SPKL Switch' 1"
+    cset "name='SPKR Boost SPKR Switch' 1"
+    cset "name='Speaker Switch' 1,1"
+    cset "name='SPK Switch' 1"
+#    cset "name='FM In Switch' 1"
+  ]
+
+  DisableSequence [
+    cset "name='IN2R PGA IN2RN Switch' 0"
+    cset "name='IN2R PGA IN2RP Switch' 0"
+    cset "name='IN2R Switch' 0"
+    cset "name='MIXINR IN2R Switch' 0"
+    cset "name='DAC1R Mixer Right Sidetone Switch' 0"
+    cset "name='DAC1L Mixer Right Sidetone Switch' 0"
+    cset "name='DAC1 Switch' 0,0"
+    cset "name='SPKL DAC1 Switch' 0"
+    cset "name='SPKR DAC1 Switch' 0"
+    cset "name='SPKL Boost SPKL Switch' 0"
+    cset "name='SPKR Boost SPKR Switch' 0"
+    cset "name='Speaker Switch' 0,0"
+    cset "name='SPK Switch' 0"
+#    cset "name='FM In Switch' 0"
+  ]
+
+  Value {
+  }
+}
+
+SectionDevice."Recording" {
+  Comment "recording FM Radio"
+
+  EnableSequence [
+# Gain
+    cset "name='IN2R Volume' 11"
+    cset "name='MIXINR IN2R Volume' 0"
+    cset "name='MIXINR Direct Voice Volume' 6"
+# Path
+    cset "name='IN2R Switch' 1"
+    cset "name='MIXINR IN2R Switch' 1"
+    cset "name='ADCR Mux' 0"
+    cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 1"
+    cset "name='AIF1ADCR Source' 1"
+    cset "name='AIF1ADCL Source' 1"
+  ]
+
+  DisableSequence [
+    cset "name='IN2R Switch' 0"
+    cset "name='MIXINR IN2R Switch' 0"
+    cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
+    cset "name='AIF1ADCR Source' 0"
+    cset "name='AIF1ADCL Source' 0"
+  ]
+
+  Value {
+  }
+}

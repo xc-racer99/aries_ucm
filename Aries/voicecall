@@ -28,7 +28,7 @@ SectionVerb {
 }
 
 SectionDevice."Earpiece" {
-  Comment "wm1811 built-in Earpiece, Receiver"
+  Comment "Aries built-in Earpiece, Receiver"
 
   EnableSequence [
 # Gain
@@ -63,7 +63,7 @@ SectionDevice."Earpiece" {
 }
 
 SectionDevice."Headphones" {
-  Comment "wm1811 3.5mm Headphones"
+  Comment "Aries 3.5mm Headphones"
 
   EnableSequence [
 # Gain
@@ -90,7 +90,7 @@ SectionDevice."Headphones" {
 }
 
 SectionDevice."Speaker" {
-  Comment "wm1811 built-in Speaker"
+  Comment "Aries built-in Speaker"
 
   EnableSequence [
 # Gain
@@ -151,7 +151,7 @@ SectionDevice."Bluetooth" {
 }
 
 SectionDevice."MainMic" {
-  Comment "wm1811 built-in main mic"
+  Comment "Aries built-in main mic"
 
   EnableSequence [
 # Gain
@@ -186,7 +186,7 @@ SectionDevice."MainMic" {
 }
 
 SectionDevice."SubMic" {
-  Comment "wm1811 built-in sub mic"
+  Comment "Aries built-in sub mic"
 
   EnableSequence [
 # Gain
@@ -221,7 +221,7 @@ SectionDevice."SubMic" {
 }
 
 SectionDevice."HeadsetMic" {
-  Comment "wm1811 external headset mic"
+  Comment "Aries external headset mic"
 
   EnableSequence [
 # Gain

@@ -1,0 +1,163 @@
+# Use case Configuration for Mobile device
+# By Inha Song <ideal.song@samsung.com>
+
+SectionVerb {
+  EnableSequence [
+  ]
+  DisableSequence [
+  ]
+
+  Value {
+    TQ "Music"
+    PlaybackCTL "hw:0"
+    CaptureCTL "hw:0"
+  }
+}
+
+SectionDevice."All" {
+  Comment "reset all"
+
+  EnableSequence [
+    cset "name='Earpiece Switch' 0"
+    cset "name='RCV Switch' 0"
+    cset "name='SPK Switch' 0"
+    cset "name='HP Switch' 0"
+    cset "name='FM In Switch' 0"
+    cset "name='LINE Switch' 0"
+    cset "name='DAC1 Switch' 0,0"
+    cset "name='DAC2 Switch' 0,0"
+    cset "name='Speaker Switch' 0,0"
+    cset "name='Earpiece Switch' 0"
+    cset "name='Headphone Switch' 0,0"
+    cset "name='DAC1L Mixer AIF2 Switch' 0"
+    cset "name='DAC1R Mixer AIF2 Switch' 0"
+    cset "name='SPKL DAC1 Switch' 0"
+    cset "name='SPKR DAC1 Switch' 0"
+    cset "name='SPKL Boost SPKL Switch' 0"
+    cset "name='SPKL Boost SPKR Switch' 0"
+    cset "name='DAC1L Mixer AIF1.1 Switch' 0"
+    cset "name='DAC1R Mixer AIF1.1 Switch' 0"
+    cset "name='SPKR Boost SPKL Switch' 0"
+    cset "name='SPKR Boost SPKR Switch' 0"
+    cset "name='SPKR Input Switch' 0"
+    cset "name='SPKL Input Switch' 0"
+    cset "name='Earpiece Mixer Left Output Switch' 0"
+    cset "name='Earpiece Mixer Right Output Switch' 0"
+    cset "name='Right Output Mixer IN2RN Switch' 0"
+    cset "name='Right Output Mixer DAC Switch' 0"
+    cset "name='Left Output Mixer IN2LN Switch' 0"
+    cset "name='Left Output Mixer DAC Switch' 0"
+    cset "name='AIF2DAC2L Mixer AIF1.1 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF1.1 Switch' 0"
+    cset "name='AIF2DAC2L Mixer AIF2 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF2 Switch' 0"
+    cset "name='Speaker Mode' 0"
+    cset "name='AIF2DAC2L Mixer AIF2 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF2 Switch' 0"
+    cset "name='DAC1L Mixer Right Sidetone Switch' 0"
+    cset "name='DAC1R Mixer Right Sidetone Switch' 0"
+    cset "name='Main Mic Switch' 0"
+    cset "name='Sub Mic Switch' 0"
+    cset "name='Third Mic Switch' 0"
+    cset "name='Headset Mic Switch' 0"
+    cset "name='MIXINR IN2R Switch' 0"
+    cset "name='MIXINL IN2L Switch' 0"
+    cset "name='IN2R PGA IN2RN Switch' 0"
+    cset "name='IN2L PGA IN2LN Switch' 0"
+    cset "name='IN2L Switch' 0"
+    cset "name='IN2R Switch' 0"
+    cset "name='IN1L Switch' 0"
+    cset "name='IN1R Switch' 0"
+    cset "name='MIXINR IN1R Switch' 0"
+    cset "name='MIXINL IN1L Switch' 0"
+    cset "name='IN1R PGA IN1RP Switch' 0"
+    cset "name='IN1R PGA IN1RN Switch' 0"
+    cset "name='IN1L PGA IN1LP Switch' 0"
+    cset "name='IN1L PGA IN1LN Switch' 0"
+    cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
+    cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
+  ]
+
+  DisableSequence [
+  ]
+}
+SectionDevice."Playback" {
+  Comment "reset playback"
+
+  EnableSequence [
+    cset "name='Earpiece Switch' 0"
+    cset "name='RCV Switch' 0"
+    cset "name='SPK Switch' 0"
+    cset "name='HP Switch' 0"
+    cset "name='FM In Switch' 0"
+    cset "name='LINE Switch' 0"
+    cset "name='DAC1 Switch' 0,0"
+    cset "name='DAC2 Switch' 0,0"
+    cset "name='Speaker Switch' 0,0"
+    cset "name='Earpiece Switch' 0"
+    cset "name='Headphone Switch' 0,0"
+    cset "name='DAC1L Mixer AIF2 Switch' 0"
+    cset "name='DAC1R Mixer AIF2 Switch' 0"
+    cset "name='SPKL DAC1 Switch' 0"
+    cset "name='SPKR DAC1 Switch' 0"
+    cset "name='SPKL Boost SPKL Switch' 0"
+    cset "name='SPKL Boost SPKR Switch' 0"
+    cset "name='DAC1L Mixer AIF1.1 Switch' 0"
+    cset "name='DAC1R Mixer AIF1.1 Switch' 0"
+    cset "name='SPKR Boost SPKL Switch' 0"
+    cset "name='SPKR Boost SPKR Switch' 0"
+    cset "name='SPKR Input Switch' 0"
+    cset "name='SPKL Input Switch' 0"
+    cset "name='Earpiece Mixer Left Output Switch' 0"
+    cset "name='Earpiece Mixer Right Output Switch' 0"
+    cset "name='Right Output Mixer IN2RN Switch' 0"
+    cset "name='Right Output Mixer DAC Switch' 0"
+    cset "name='Left Output Mixer IN2LN Switch' 0"
+    cset "name='Left Output Mixer DAC Switch' 0"
+    cset "name='AIF2DAC2L Mixer AIF1.1 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF1.1 Switch' 0"
+    cset "name='AIF2DAC2L Mixer AIF2 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF2 Switch' 0"
+    cset "name='Speaker Mode' 0"
+    cset "name='AIF2DAC2L Mixer AIF2 Switch' 0"
+    cset "name='AIF2DAC2R Mixer AIF2 Switch' 0"
+    cset "name='DAC1L Mixer Right Sidetone Switch' 0"
+    cset "name='DAC1R Mixer Right Sidetone Switch' 0"
+  ]
+
+  DisableSequence [
+  ]
+}
+
+SectionDevice."Capture" {
+  Comment "reset capture"
+
+  EnableSequence [
+    cset "name='Right Output Mixer IN2RN Switch' 0"
+    cset "name='Left Output Mixer IN2LN Switch' 0"
+    cset "name='Main Mic Switch' 0"
+    cset "name='Sub Mic Switch' 0"
+    cset "name='Third Mic Switch' 0"
+    cset "name='Headset Mic Switch' 0"
+    cset "name='MIXINR IN2R Switch' 0"
+    cset "name='MIXINL IN2L Switch' 0"
+    cset "name='IN2R PGA IN2RN Switch' 0"
+    cset "name='IN2L PGA IN2LN Switch' 0"
+    cset "name='IN2L Switch' 0"
+    cset "name='IN2R Switch' 0"
+    cset "name='IN1L Switch' 0"
+    cset "name='IN1R Switch' 0"
+    cset "name='MIXINR IN1R Switch' 0"
+    cset "name='MIXINL IN1L Switch' 0"
+    cset "name='IN1R PGA IN1RP Switch' 0"
+    cset "name='IN1R PGA IN1RN Switch' 0"
+    cset "name='IN1L PGA IN1LP Switch' 0"
+    cset "name='IN1L PGA IN1LN Switch' 0"
+    cset "name='AIF1ADC1L Mixer ADC/DMIC Switch' 0"
+    cset "name='AIF1ADC1R Mixer ADC/DMIC Switch' 0"
+  ]
+
+  DisableSequence [
+  ]
+}
+
