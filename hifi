@@ -160,35 +160,6 @@ SectionDevice."Line" {
   }
 }
 
-SectionDevice."HDMI" {
-  Comment "playback via HDMI"
-
-  EnableSequence [
-# Path
-    cset "name='Right Output Mixer DAC Switch' 1"
-    cset "name='Left Output Mixer DAC Switch' 1"
-    cset "name='LINEOUT1N Mixer Right Output Switch' 1"
-    cset "name='LINEOUT1P Mixer Left Output Switch' 1"
-    cset "name='LINEOUT1N Switch' 1"
-    cset "name='LINEOUT1P Switch' 1"
-    cset "name='HDMI Switch' 1"
-  ]
-
-  DisableSequence [
-    cset "name='Right Output Mixer DAC Switch' 0"
-    cset "name='Left Output Mixer DAC Switch' 0"
-    cset "name='LINEOUT1N Mixer Right Output Switch' 0"
-    cset "name='LINEOUT1P Mixer Left Output Switch' 0"
-    cset "name='LINEOUT1N Switch' 0"
-    cset "name='LINEOUT1P Switch' 0"
-    cset "name='HDMI Switch' 0"
-  ]
-
-  Value {
-    PlaybackPCM "hw:0,3"
-  }
-}
-
 SectionDevice."Bluetooth" {
   Comment "bluetooth sco with codec master"
 

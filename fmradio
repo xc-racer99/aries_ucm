@@ -95,40 +95,6 @@ SectionDevice."Speaker" {
   }
 }
 
-SectionDevice."HDMI" {
-  Comment "playback via HDMI"
-
-  EnableSequence [
-# Path
-    cset "name='DAC1R Mixer AIF1.1 Switch' 1"
-    cset "name='DAC1L Mixer AIF1.1 Switch' 1"
-    cset "name='DAC1 Switch' 1,1"
-    cset "name='Right Output Mixer DAC Switch' 1"
-    cset "name='Left Output Mixer DAC Switch' 1"
-    cset "name='LINEOUT1N Mixer Right Output Switch' 1"
-    cset "name='LINEOUT1P Mixer Left Output Switch' 1"
-    cset "name='LINEOUT1N Switch' 1"
-    cset "name='LINEOUT1P Switch' 1"
-    cset "name='HDMI Switch' 1"
-  ]
-
-  DisableSequence [
-    cset "name='DAC1R Mixer AIF1.1 Switch' 0"
-    cset "name='DAC1L Mixer AIF1.1 Switch' 0"
-    cset "name='DAC1 Switch' 0,0"
-    cset "name='Right Output Mixer DAC Switch' 0"
-    cset "name='Left Output Mixer DAC Switch' 0"
-    cset "name='LINEOUT1N Mixer Right Output Switch' 0"
-    cset "name='LINEOUT1P Mixer Left Output Switch' 0"
-    cset "name='LINEOUT1N Switch' 0"
-    cset "name='LINEOUT1P Switch' 0"
-    cset "name='HDMI Switch' 0"
-  ]
-
-  Value {
-  }
-}
-
 SectionDevice."Recording" {
   Comment "recording FM Radio"
 
