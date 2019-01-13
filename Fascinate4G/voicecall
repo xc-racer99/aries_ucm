@@ -59,6 +59,7 @@ SectionDevice."Earpiece" {
 
   Value {
     PlaybackPCM "hw:0,3"
+    PlaybackVolume "Earpiece Volume"
   }
 }
 
@@ -86,6 +87,8 @@ SectionDevice."Headphones" {
 
   Value {
     PlaybackPCM "hw:0,3"
+    PlaybackVolume "Headphone Volume"
+    JackControl "HP Jack"
   }
 }
 
@@ -118,6 +121,7 @@ SectionDevice."Speaker" {
 
   Value {
     PlaybackPCM "hw:0,3"
+    PlaybackVolume "Speaker Volume"
   }
 }
 
@@ -182,6 +186,7 @@ SectionDevice."MainMic" {
 
   Value {
     CapturePCM "hw:0,0"
+    CaptureVolume "IN1L Volume"
   }
 }
 
@@ -217,6 +222,8 @@ SectionDevice."HeadsetMic" {
 
   Value {
     CapturePCM "hw:0,0"
+    CaptureVolume "IN1R Volume"
+    JackControl "Headset Mic Jack"
   }
 }
 
