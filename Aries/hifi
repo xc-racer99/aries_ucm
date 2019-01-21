@@ -206,7 +206,9 @@ SectionDevice."Bluetooth" {
 
   Value {
     PlaybackPCM "hw:0,0"
+    PlaybackPriority 95
     CapturePCM "hw:0,0"
+    CapturePriority 95
   }
 }
 
